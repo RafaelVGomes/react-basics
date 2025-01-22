@@ -1,0 +1,44 @@
+name: Manage Merges and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Sempre que a branch `main` for atualizada
+
+  pull_request:
+    branches:
+      - main # Sempre que um PR for aberto ou mesclado na `main`
+
+jobs:
+  merge-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      # Step 1: Ensure branch is up-to-date
+      - name: Ensure branch is up-to-date
+        run: |
+          git fetch origin
+          git checkout main
+          git merge --no-edit origin/dev || echo "No changes to merge"
+
+      # Step 2: Deploy to GitHub Pages
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
