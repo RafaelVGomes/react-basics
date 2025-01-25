@@ -8,7 +8,7 @@ const exercises = import.meta.glob('./pages/exercises/**/*.jsx', { eager: true }
 
 export default function App() {
   return (
-    <Router>
+    <Router basename='/react-basics'>
       <Navbar />
       <div className="container mt-4">
         <Routes>
