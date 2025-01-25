@@ -1,23 +1,23 @@
 # React Basics Portfolio
 
-Este repositório contém um portfólio desenvolvido com **React**, **React Router**, **Bootstrap** e outras tecnologias, exibindo exercícios práticos realizados durante o aprendizado de React.
+This repository contains a portfolio developed with **React**, **React Router**, **Bootstrap**, and other technologies, showcasing practical exercises completed during React learning.
 
-## Visão Geral
+## Overview
 
-O projeto tem como objetivo:
+The project's goals are:
 
-- Consolidar conhecimentos fundamentais em React.
-- Demonstrar boas práticas no uso de componentes, roteamento e estilização.
-- Servir como portfólio para futuras oportunidades.
+- Consolidate fundamental knowledge in React.
+- Demonstrate best practices in using components, routing, and styling.
+- Serve as a portfolio for future opportunities.
 
-## Funcionalidades
+## Features
 
-- Navegação dinâmica utilizando **React Router**.
-- Layout responsivo com **Bootstrap**.
-- Destaque de código com **Prism.js**.
-- Estrutura modular para adicionar novos exercícios facilmente.
+- Dynamic navigation using **React Router**.
+- Responsive layout with **Bootstrap**.
+- Code highlighting with **Prism.js**.
+- Modular structure for easily adding new exercises.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
@@ -25,82 +25,104 @@ O projeto tem como objetivo:
 - [React Router](https://reactrouter.com/)
 - [Prism.js](https://prismjs.com/)
 
-## Estrutura do Projeto
+## Project Structure
 
 ```plaintext
 react-basics
 ├── src
-│   ├── components          # Componentes reutilizáveis
+│   ├── components          # Reusable components
 │   │   ├── Accordion.jsx
 │   │   ├── Card.jsx
 │   │   ├── CodeViewer.jsx
+│   │   ├── DynamicPage.jsx
+│   │   ├── ArgsEditor.jsx
+│   │   ├── Output.jsx
 │   │   └── Navbar.jsx
-│   ├── pages               # Páginas principais
+│   ├── pages               # Main pages
 │   │   ├── About.jsx
 │   │   ├── Home.jsx
-│   │   ├── constants       # Dados compartilhados
+│   │   ├── constants       # Shared data
 │   │   │   └── componentsData.jsx
-│   │   └── exercises       # Exercícios práticos
-│   │       └── (Pastas de categorias...)
-│   │           └── (Arquivos JSX...)
-│   ├── App.jsx             # Componente principal
-│   ├── main.jsx            # Ponto de entrada do React
+│   │   └── exercises       # Practical exercises (folders are categories)
+│   │       └── component
+│   │           ├── Ex2.jsx
+│   │           └── Greeting.jsx
+│   ├── App.jsx             # Main component
+│   ├── main.jsx            # React entry point
+├── .github/workflows       # CI/CD automation settings
+│   └── deploy.yml
 ├── public
-│   └── index.html          # HTML base do projeto
-├── package.json            # Configurações do projeto e dependências
-├── vite.config.js          # Configuração do Vite
-└── yarn.lock               # Lockfile do Yarn
+│   └── index.html          # Base HTML of the project
+├── package.json            # Project configurations and dependencies
+├── vite.config.js          # Vite configuration
+└── yarn.lock               # Yarn lockfile
 ```
 
-## Componentes
+## Components
 
 ### Accordion
 
-Um componente para exibir listas de itens em formato de acordeão.
+A component to display item lists in an accordion format.
 
 ### Card
 
-Componente estilizado para exibir informações com título e conteúdo personalizados.
+Styled component to display information with customizable title and content.
 
 ### CodeViewer
 
-Destaque de código usando Prism.js para melhor visualização.
+Code highlighting using Prism.js for better visualization.
 
 ### Navbar
 
-Barra de navegação que integra links dinâmicos com React Router.
+Navigation bar that integrates dynamic links with React Router.
 
-## Como Executar o Projeto
+### DynamicPage
 
-1. Clone este repositório:
+Page that generates dynamic content based on external data.
+
+### ArgsEditor
+
+Editor to dynamically manipulate arguments.
+
+### Output
+
+Component that displays output based on user input.
+
+## Access Online
+
+The project is available on [GitHub Pages](https://rafaelvgomes.github.io/react-basics/).
+
+## How to Run the Project
+
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/RafaelVGomes/react-basics.git
    cd react-basics
    ```
 
-2. Instale as dependências:
+2. Install dependencies:
 
    ```bash
    yarn
    ```
 
-3. Inicie o servidor de desenvolvimento:
+3. Start the development server:
 
    ```bash
    yarn dev
    ```
 
-4. Acesse o projeto no navegador em [http://localhost:5000](http://localhost:5000).
+4. Access the project in the browser at [http://localhost:5000](http://localhost:5000).
 
-## Exercícios
+## Exercises
 
-Os exercícios serão adicionados e exibidos dinamicamente no portfólio.
+Exercises will be dynamically added and displayed in the portfolio.
 
-## Licença
+## License
 
-Este projeto é licenciado sob a [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Mantenedor:** [Rafael Vieira Gomes](https://github.com/RafaelVGomes)
+**Maintainer:** [Rafael Vieira Gomes](https://github.com/RafaelVGomes)
