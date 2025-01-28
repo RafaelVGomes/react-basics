@@ -10,9 +10,9 @@ export const componentsData = [
     folderName: 'useState',
     argsMapping: {}
   },
-  {
-    displayName: 'useEffect()',
-    folderName: 'useEffect',
-    argsMapping: {}
-  },
+  // {
+  //   displayName: 'useEffect()',
+  //   folderName: 'useEffect',
+  //   argsMapping: {}
+  // },
 ];
