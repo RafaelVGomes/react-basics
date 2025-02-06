@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SelectBSColors from './SelectBSColors';
 
 const ChangeColorExample = () => {
-  const [color, setColor] = useState('primary');
+  const [color, setColor] = useState('none');
 
   const handleColorChange = (newColor) => {
     setColor(newColor);
